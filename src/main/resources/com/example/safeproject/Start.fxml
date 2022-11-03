@@ -18,12 +18,12 @@
             <Font size="15.0" />
          </font>
       </Label>
+      <TextField fx:id="pass1" alignment="CENTER" layoutX="135.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
       <TextField fx:id="pass2" alignment="CENTER" layoutX="190.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
       <TextField fx:id="pass3" alignment="CENTER" layoutX="245.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
-      <TextField fx:id="pass6" alignment="CENTER" layoutX="410.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
       <TextField fx:id="pass4" alignment="CENTER" layoutX="300.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
       <TextField fx:id="pass5" alignment="CENTER" layoutX="355.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
-      <TextField fx:id="pass1" alignment="CENTER" layoutX="135.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
+      <TextField fx:id="pass6" alignment="CENTER" layoutX="410.0" layoutY="173.0" onKeyTyped="#onKey" prefHeight="55.0" prefWidth="55.0" />
       <Button fx:id="openBTN" alignment="CENTER" layoutX="261.0" layoutY="285.0" mnemonicParsing="false" onAction="#openContent" prefHeight="40.0" prefWidth="80.0" text="ABRIR" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
