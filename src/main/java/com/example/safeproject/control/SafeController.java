@@ -2,6 +2,7 @@ package com.example.safeproject.control;
 
 import com.example.safeproject.SafeApplication;
 import com.example.safeproject.model.FileUtils;
+import com.example.safeproject.model.Password;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -55,8 +56,8 @@ public class SafeController {
                         pass4.getText() +
                         pass5.getText() +
                         pass6.getText();
-
-        if (tryPass.equals(FileUtils.readLine("src/main/resources/com/example/safeproject/pass.txt"))) {
+        Password pass = Password.getInstance();
+        if (tryPass.equals(pass.readPass())) {
             SafeApplication.showWindow("Content.fxml");
             Stage current = (Stage) openBTN.getScene().getWindow();
             current.hide();

@@ -1,5 +1,5 @@
 package com.example.safeproject.control;
-
+import com.example.safeproject.model.Content;
 import com.example.safeproject.SafeApplication;
 import com.example.safeproject.model.FileUtils;
 import javafx.fxml.FXML;
@@ -7,11 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.util.ResourceBundle;
 
 public class ContentController implements Initializable {
@@ -41,7 +37,8 @@ public class ContentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        contentTA.setText(FileUtils.readFile("src/main/resources/com/example/safeproject/content.txt"));
+        Content content = Content.getInstance();
+        contentTA.setText(content.readContent());
     }
 
     private void saveInfoOnTA(){

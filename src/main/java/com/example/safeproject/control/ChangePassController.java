@@ -2,6 +2,7 @@ package com.example.safeproject.control;
 
 import com.example.safeproject.SafeApplication;
 import com.example.safeproject.model.FileUtils;
+import com.example.safeproject.model.Password;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -109,7 +110,8 @@ public class ChangePassController {
                         new4.getText() +
                         new5.getText() +
                         new6.getText();
-        if (tryPass.equals(FileUtils.readLine("src/main/resources/com/example/safeproject/pass.txt"))) {
+        Password pass = Password.getInstance();
+        if (tryPass.equals(pass.readPass())) {
             if (newPass.length() == 6){
                 FileUtils.save(newPass, "src/main/resources/com/example/safeproject/pass.txt");
                 SafeApplication.showWindow("Start.fxml");
